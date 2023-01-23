@@ -1,15 +1,33 @@
-//Main.js
-function getPower(decimalPlaces) {
-	return 10 ** decimalPlaces;
+let cookBeans = () => {
+  return new Promise ((resolve, reject) => {
+   setTimeout(()=>{
+     resolve('beans');
+   }, 1000);
+ });
 }
 
-function capitalize(word) {
-	return word[0].toUpperCase() + word.slice(1);
+let steamBroccoli = () => {
+ return new Promise ((resolve, reject) => {
+   setTimeout(()=>{
+     resolve('broccoli');
+   }, 1000);
+ });
 }
 
-function roundToDecimalPlace(number, decimalPlaces = 2) {
-	const round = getPower(decimalPlaces);
-	return Math.round(number * round) / round;
+let cookRice = () => {
+ return new Promise ((resolve, reject) => {
+   setTimeout(()=>{
+     resolve('rice');
+   }, 1000);
+ });
 }
 
-export { capitalize, roundToDecimalPlace };
+let bakeChicken = () => {
+ return new Promise ((resolve, reject) => {
+   setTimeout(()=>{
+     resolve('chicken');
+   }, 1000);
+ });
+}
+
+module.exports = {cookBeans, steamBroccoli, cookRice, bakeChicken};
