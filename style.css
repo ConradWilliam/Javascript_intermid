@@ -1,0 +1,19 @@
+/* Attributes */
+[href]{
+    color: magenta;
+ }
+
+<img src='/images/seasons/cold/winter.jpg'>
+<img src='/images/seasons/warm/summer.jpg'>
+
+img[src*='winter'] {
+    height: 50px;
+  }
+   
+  img[src*='summer'] {
+    height: 100px;
+  }
+
+  a:hover{
+    color: darkorange;
+  }
