@@ -1,15 +1,12 @@
-let {cookBeans, steamBroccoli, cookRice, bakeChicken} = require('./main.js');
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-// Write your code below:
+// Write code here:
+const myList = (<ul>
+  <li>Menu</li>
+  <li>Contacts</li>
+  <li>People</li>
+  <li>Services</li>
+</ul>)
 
-async function serveDinner(){
-  let vegetablePromise = steamBroccoli();
-  let starchPromise = cookRice();
-  let proteinPromise = bakeChicken();
-  let sidePromise = cookBeans();
-  
-  console.log(`Dinner is served. We're having ${await vegetablePromise}, ${await starchPromise}, ${await proteinPromise}, and ${await sidePromise}.`)
-
-}
-
-serveDinner();
+ReactDOM.render(myList, document.getElementById('app'));
